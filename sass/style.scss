@@ -1,0 +1,24 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+.grid-container{
+	display: grid;
+	// grid-template-columns: repeat(3, 200px); Обычный способ
+	grid-template-columns: repeat(auto-fill, minmax(100px, 300px));/*Если снизу будет контент, который будет мешать данныым блокам, то они будут уменьшаться до 100px*/
+	grid-template-rows: repeat(3, minmax(100px, auto));/*Если у контейнера не будет контента, что будет вылазить за рамки, то он будет занимать минимальную ширину*/
+	grid-auto-rows: minmax(100px, auto);/*Делать асвтоматической максиммальную величину нужно делать в тех случаях, когда неизвестно, сколько контента будет помещаться*/
+	gap: 10px;
+}
+
+.grid-elem{
+	// height: 50px;
+	background-color: rgba(1, 1, 96, 1);
+	color: #fff;
+	line-height: 50px;
+	text-align: center;
+	font-size: 26px;
+	border: 1px solid #000;
+	border-radius: 4px;
+}
